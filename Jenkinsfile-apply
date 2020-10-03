@@ -18,7 +18,7 @@ sh 'oc apply --dry-run --validate -k config'
     }
     stage ('Apply resources') {
 	when{ 
-		branch 'masterI'
+		branch 'master'
 		}
 
       steps {
@@ -28,7 +28,7 @@ sh './wait_oauth.sh'
     }
     stage ('Verify test user') {
  when{
-                branch 'masterI'
+                branch 'master'
                 }
 
       steps {
